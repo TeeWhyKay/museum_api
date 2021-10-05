@@ -7,7 +7,13 @@ This API was built using rails API-only application. See more [here](https://gui
 1. Fork this repository
 2. Sign up to [mapbox](https://docs.mapbox.com/help/tutorials/get-started-tokens-api/) and register for free to get an API key
 3. Create a .env file in the root folder of the rails app
-4.  MAPBOX_API_KEY=pk.blablabla
-5. Run  rails s from root
-6. In another terminal run:    curl http://localhost:3000/museums\?lat\=103.842656\&lng\=1.2871406
+4. In the .env file set MAPBOX_API_KEY=pk.blablabla
+5. Open a terminal and from the rails root directory run:
+```bash
+rails s
+```
+6. In another terminal run:
+```bash
+curl http://localhost:3000/museums\?lat\=103.842656\&lng\=1.2871406
+```
 7. Receive a .json response
