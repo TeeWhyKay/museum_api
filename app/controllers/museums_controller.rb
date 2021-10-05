@@ -6,8 +6,11 @@ class MuseumsController < ApplicationController
   def nearby
     lat = params[:lat].to_f
     lng = params[:lng].to_f
-    res = search_museums(lat,lng)
-    byebug
+    res = search_museums(lat, lng)
+
+    respond_to do |f|
+      f.json { render json: res }
+    end
   end
 
   # input (float) lat, (float) long
